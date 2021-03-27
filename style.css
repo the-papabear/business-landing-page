@@ -1,0 +1,129 @@
+/*Global necessities (need to rename this so it makes more sense)*/
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin: 0;
+  height: 100%;
+}
+
+.flexbox-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  height: 100%;
+}
+
+.flexbox-item {
+  background-color: #ffff;
+  font-size: 30px;
+  height: 350px;
+}
+
+.btn {
+  position: relative;
+  align-items: center;
+}
+
+/*Header content*/
+.menubar {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: flex-start;
+  height: 5rem;
+  background-color: #50b2f1;
+  border: none;
+}
+
+.empty-space {
+  flex: 1;
+}
+
+.menubar ul,
+h5 {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  text-transform: uppercase;
+  font-size: 22px;
+  list-style: none;
+  margin: 2rem;
+}
+
+.menubar a {
+  text-decoration: none;
+  margin: 1rem;
+
+  font-weight: bold;
+  color: black;
+  opacity: 0.7;
+}
+
+.menubar a:hover {
+  color: #faf782;
+  transition: 0.5s;
+  opacity: 0.9;
+}
+
+.contact-form {
+  background-color: rgb(189, 156, 156);
+  border: 2px solid rgb(189, 156, 156);
+  box-shadow: 2px 2px 4px 0 black;
+  border-radius: 7px;
+  width: 5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.contact-form:hover {
+  background-color: #faf782;
+  border: 2px solid #faf782;
+  transition: 0.5s;
+}
+
+/*Middle content*/
+
+/*Section 1*/
+.motto {
+  position: relative;
+  text-transform: capitalize;
+}
+
+.logo {
+  margin-top: 3.8rem;
+  float: left;
+  max-width: 35%;
+  max-height: 35%;
+}
+
+.company-name {
+  position: relative;
+  margin: 2rem;
+}
+
+.slogan {
+  position: relative;
+  margin-left: 18rem;
+}
+
+.learn-more {
+  position: flex;
+  margin-left: 35rem;
+  text-decoration: none;
+}
+
+/*Footer content*/
+.footer {
+  display: flex;
+  align-items: center;
+  height: 7rem;
+  background-color: #faf782;
+  border: none;
+}
+
+.footer p {
+  margin: auto;
+  font-size: 12px;
+}
+
+/*Media queries*/
