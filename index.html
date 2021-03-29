@@ -8,7 +8,8 @@
     <title>Company Landing Page</title>
   </head>
   <body>
-    <header class="flexbox-item menubar">
+    <header class="menubar">
+      <img class="baby-toy" src="/img/baby-toy-header.png">
       <h5>Baby Bear Company</h5>
       <p class="empty-space"></p>
       <ul>
@@ -21,44 +22,106 @@
         <li>
           <a href="#">Work with us!</a>
         </li>
-        <button class="contact-form">Contact</button>
+        <button id="contact--form" class="btn">Contact</button>
       </ul>
     </header>
-    <div class="flexbox-container">
-      <div class="flexbox-item motto">
-        <img class="logo" src="img/img logo.png" />
-        <h1 class="company-name">baby bear company</h1>
-        <h3 class="slogan">The products loved by babies and parents alike!</h3>
-        <p><a href="#" class="btn learn-more">Learn more &darr;</a></p>
+      <!--Section 1-->
+      <div class="section__1">
+        <div class="container--motto">
+          <div class="container__logo__name">
+          <img class="logo" src="img/img logo.png" />
+          <h1 class="company-name">baby bear company</h1>
+          </div>
+          <h3 class="slogan">
+
+            <a href="#" class="heart--animation">loved</a>
+            by babies and parents alike!
+          </h3>
+          <p>
+            <a href="#" id="learn-more" class="btn__learn">Learn more &darr;</a>
+          </p>
+        </div>
       </div>
-      <div class="flexbox-item product-presentation">
-        <p>
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        </p>
+
+      <!--Section 2: Presentation-->
+      <div class="section__2 section__2--container">
+        <div class="section__2--buttons">
+          <li>
+            <button
+              class="btn presentation__tab presentation__tab--1 presentation__tab--active"
+              data-tab="1"
+            >
+              1 We have the best variety!
+            </button>
+          </li>
+          <li>
+            <button
+              class="btn presentation__tab presentation__tab--2"
+              data-tab="2"
+            >
+              2 We have the best quality!
+            </button>
+          </li>
+          <li>
+            <button
+              class="btn presentation__tab presentation__tab--3"
+              data-tab="3"
+            >
+              3 We have the best prices!
+            </button>
+          </li>
+        </div>
+
+          <div
+            class="presentation__content presentation__content--1 presentation__content--active"
+          >
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </p>
+          </div>
+          <div class="presentation__content presentation__content--2">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </p>
+          </div>
+          <div class="presentation__content presentation__content--3">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </p>
+          </div>
+        </div>
       </div>
-      <h1 class="btn down">&#8810;</h1>
-      <div class="flexbox-item testimonials">
+      <h1 class="btn btn__down"><span class="arrow">&#8810;</span></h1>
+      <!--Section 3: Testimonials-->
+      <div class="section__3">
         <p>
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+          nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
           reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
           pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
           culpa qui officia deserunt mollit anim id est laborum."
         </p>
       </div>
-      <h1 class="btn">&#8810;</h1>
-      <div class="flexbox-item call-to-action">
-        <p>
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        </p>
+      <h1 class="btn btn__down"><span class="arrow">&#8810;</span></h1>
+      <!--Section 4: Call to action-->
+      <div class="section__4 section__4--container">
+        <div class="section__4--call-to-action">
+        <p>Order the best you can get on the market!</p>
+        </div>
       </div>
     </div>
-    <footer class="flexbox-item flexbox footer">
-      <p>
+    <!--Footer-->
+    <footer class="footer">
+      <p class="copyright">
         &copy; Gabriel R. Ursu 2021. All rights reserved. Contact the developer:
         <a href="https://www.linkedin.com/in/gabriel-ursu/" target="_blank"
           >LinkedIn</a
