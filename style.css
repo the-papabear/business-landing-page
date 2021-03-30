@@ -6,34 +6,6 @@ body {
   height: 100%;
   background-color: #f3f3f3;
   font-size: 30px;
-  overflow-x: hidden;
-}
-
-.btn {
-  position: relative;
-  align-items: center;
-  background-color: rgb(218, 114, 114);
-  border: 2px solid rgb(218, 114, 114);
-  box-shadow: 2px 2px 4px 0 black;
-  border-radius: 7px;
-  text-transform: uppercase;
-  font-weight: bold;
-}
-
-.btn__down {
-  position: relative;
-  transform: rotate(-90deg);
-  max-width: 30px;
-  max-height: 300px;
-  margin-left: 50%;
-  z-index: 1;
-  top: -42px;
-  font-size: 30px;
-}
-
-.arrow {
-  position: relative;
-  top: -2px;
 }
 
 .section__1,
@@ -49,38 +21,43 @@ body {
   position: absolute;
   max-width: 25%;
   height: auto;
-  left: 64%;
+  left: 65.8%;
 }
 
 .menubar {
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
+  padding: 0rem 2rem 5rem 2rem;
   background-image: linear-gradient(to bottom, #50b2f1, #f3f3f3);
 }
 
-.menubar ul {
-  display: inherit;
-  flex-wrap: wrap;
-  align-items: baseline;
+.btn__menu {
+  display: flex;
+  flex-direction: row;
+  z-index: 1;
 
-  text-transform: uppercase;
-  font-size: 20px;
-  margin-left: 47%;
+  margin-left: 45%;
+
+  font-size: 18px;
   list-style: none;
+  text-transform: uppercase;
 }
 
 .menubar a {
-  display: inline-block;
   text-decoration: none;
-  margin: 1rem;
-
-  font-weight: bold;
-  color: black;
-  opacity: 0.7;
+  margin: 0.7rem;
+  padding: 0.5rem;
+  font-weight: 500;
+  color: rgb(0, 0, 0);
 }
 
-/*Middle content*/
+.btn--zoom:hover {
+  color: rgb(0, 0, 0, 0.5);
+  background-color: rgb(0, 0, 0, 0.2);
+  border: 1px rgba(163, 87, 87, 0.2);
+  border-radius: 0.5rem;
+  transition: 0.2s;
+}
+
 /*Section 1*/
 .logo {
   float: left;
@@ -96,25 +73,22 @@ body {
   padding-bottom: 5%;
 }
 
-.slogan {
-  position: relative;
-  left: 30%;
+.slogan mark {
+  background: linear-gradient(
+    -100deg,
+    hsla(0, 69%, 69%, 0.3),
+    hsla(0, 92%, 75%, 0.7) 95%,
+    hsla(0, 0%, 100%, 0.1)
+  );
+  border-radius: 1em 0;
+  padding: 0.5rem;
 }
 
 .btn__learn {
   position: relative;
   margin-left: 30%;
-  text-decoration: none;
   color: rgb(218, 114, 114);
   font-weight: 500;
-}
-
-.heart--animation {
-  text-decoration: none;
-  color: black;
-  padding: 2px;
-  border-radius: 10px;
-  background-color: rgb(218, 114, 114);
 }
 
 /*Section 2"*/
@@ -123,7 +97,6 @@ body {
 }
 
 .presentation__tab--active {
-  transform: translateY(-20%);
 }
 
 .presentation__content {
@@ -132,16 +105,15 @@ body {
 
 .presentation__content--active {
   display: flex;
-  border: 1px solid rosybrown;
+  border: 1px solid rgb(188, 143, 143);
   border-radius: 10px;
-  background-color: rosybrown;
+  background-color: rgb(188, 143, 143);
 }
 
 /*Section 3*/
 .section__3--container {
   display: flex;
   flex-wrap: wrap;
-  margin-top: -80px;
 }
 
 .person--1,
@@ -157,22 +129,21 @@ body {
 .section__4 {
   display: flex;
   align-items: stretch;
-  margin-top: -30px;
-  background-image: linear-gradient(#f3f3f3, #50b2f1);
+  background-image: linear-gradient(#f3f3f3 0.1%, #50b2f1);
 }
 
 .section__4--baby-on-moon {
   position: absolute;
-  max-width: 20%;
   height: auto;
+  max-width: 20vw;
   z-index: 1;
   left: 75%;
-  transform: translateY(-10%);
+  transform: translateY(10%);
 }
 .section__4--call-to-action {
   position: relative;
   transform: rotate(-4deg);
-  top: 2rem;
+  top: 5rem;
   left: 17%;
   font-size: 3vw;
   font-weight: 900;
@@ -182,14 +153,14 @@ body {
 .footer {
   display: flex;
   align-items: center;
-  height: 20rem;
+  height: 15rem;
   background-color: #50b2f1;
   border: none;
 }
 
 .copyright {
   position: relative;
-  top: 7rem;
+  top: 5rem;
   left: 30rem;
   font-weight: 500;
   font-size: 12px;
