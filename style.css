@@ -1,4 +1,3 @@
-/*Global necessities (need to rename this so it makes more sense)*/
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -7,7 +6,6 @@ body {
   height: 100%;
   background-color: #f3f3f3;
   font-size: 30px;
-
   overflow-x: hidden;
 }
 
@@ -41,6 +39,7 @@ body {
 .section__1,
 .section__2,
 .section__3 {
+  display: flex;
   border-bottom: 3px solid rgb(155, 155, 155, 0.5);
 }
 
@@ -57,25 +56,18 @@ body {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  align-items: flex-start;
-  height: 8rem;
   background-image: linear-gradient(to bottom, #50b2f1, #f3f3f3);
-  border: none;
 }
 
-.empty-space {
-  flex: 1;
-}
-
-.menubar ul,
-h5 {
-  display: flex;
+.menubar ul {
+  display: inherit;
   flex-wrap: wrap;
-  align-content: space-between;
+  align-items: baseline;
+
   text-transform: uppercase;
-  font-size: 22px;
+  font-size: 20px;
+  margin-left: 47%;
   list-style: none;
-  margin: 2rem;
 }
 
 .menubar a {
@@ -88,24 +80,13 @@ h5 {
   opacity: 0.7;
 }
 
-.menubar a:hover {
-  color: #faf782;
-  transition: 0.5s;
-  opacity: 0.9;
-}
-
-#contact--form:hover {
-  background-color: #faf782;
-  border: 2px solid #faf782;
-  transition: 0.5s;
-}
-
 /*Middle content*/
 /*Section 1*/
 .logo {
   float: left;
-  max-width: 15%;
+  max-width: 30%;
   height: auto;
+  margin-left: 10%;
 }
 
 .container--motto {
@@ -117,12 +98,12 @@ h5 {
 
 .slogan {
   position: relative;
-  left: 5%;
+  left: 30%;
 }
 
 .btn__learn {
   position: relative;
-  margin-left: 8.1rem;
+  margin-left: 30%;
   text-decoration: none;
   color: rgb(218, 114, 114);
   font-weight: 500;
@@ -142,7 +123,7 @@ h5 {
 }
 
 .presentation__tab--active {
-  transform: translateX(15%);
+  transform: translateY(-20%);
 }
 
 .presentation__content {
@@ -150,31 +131,49 @@ h5 {
 }
 
 .presentation__content--active {
-  display: inline-flex;
+  display: flex;
   border: 1px solid rosybrown;
   border-radius: 10px;
-  margin-left: 280px;
-  transform: translateY(-110px);
   background-color: rosybrown;
 }
 
 /*Section 3*/
-.section__3 {
+.section__3--container {
   display: flex;
-  align-items: stretch;
+  flex-wrap: wrap;
+  margin-top: -80px;
+}
+
+.person--1,
+.person--2,
+.person--3 {
+  margin: 0px 10px 10px 0px;
+  border: 1px solid black;
+  width: 430px;
+  height: 300px;
 }
 
 /*Section 4*/
 .section__4 {
   display: flex;
   align-items: stretch;
-  background-image: linear-gradient(#f3f3f3 2%, #50b2f1);
+  margin-top: -30px;
+  background-image: linear-gradient(#f3f3f3, #50b2f1);
+}
+
+.section__4--baby-on-moon {
+  position: absolute;
+  max-width: 20%;
+  height: auto;
+  z-index: 1;
+  left: 75%;
+  transform: translateY(-10%);
 }
 .section__4--call-to-action {
   position: relative;
   transform: rotate(-4deg);
-  top: -2rem;
-  left: 17rem;
+  top: 2rem;
+  left: 17%;
   font-size: 3vw;
   font-weight: 900;
 }
@@ -183,17 +182,19 @@ h5 {
 .footer {
   display: flex;
   align-items: center;
-  height: 10rem;
-  background-image: linear-gradient(to top, #faf782, #50b2f1);
+  height: 20rem;
+  background-color: #50b2f1;
   border: none;
 }
 
 .copyright {
   position: relative;
-  margin: auto;
-  top: 3rem;
+  top: 7rem;
+  left: 30rem;
   font-weight: 500;
   font-size: 12px;
+  opacity: 0.8;
+  color: rgb(17, 17, 17);
 }
 
 /*Media queries*/
