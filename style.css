@@ -65,6 +65,10 @@ body {
   height: auto;
 }
 
+.company__name {
+  color: #da7272;
+}
+
 .container--motto {
   position: relative;
   text-transform: capitalize;
@@ -161,6 +165,19 @@ body {
   border: 1px solid #000000;
   width: 430px;
   height: 300px;
+}
+
+.contact__person {
+  height: 60px;
+  width: 80px;
+  border-radius: 50%;
+  border: 1px solid #000000;
+  margin: 0 10px 0 10px;
+}
+
+.contact__person__name {
+  font-weight: 500;
+  padding-top: 8px;
 }
 
 /*Section 4*/
