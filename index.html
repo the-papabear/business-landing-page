@@ -7,25 +7,29 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="shortcut icon" type="image" href="img/img logo.png">
     <title>Baby Bear Company: Loved By Babies and Parents Alike!</title>
+    <script defer src="script.js"></script>
   </head>
   <body>
     <header class="menubar">
       <img class="baby-toy" src="/img/baby-toy-header.png">
-      <ul class="btn__menu">
+      <ul class="btn__menu nav__links">
         <li>
-          <a href="#" class="btn--zoom">Presentation</a>
+          <a class="nav__link btn--hover" href="#section--1">Presentation</a>
         </li>
         <li>
-          <a href="#" class="btn--zoom">Testimonials</a>
+          <a href="#section--2" class="nav__link btn--hover">Testimonials</a>
         </li>
         <li>
-          <a href="#" class="btn--zoom">Work with us!</a>
+          <a href="#section--3" class="nav__link btn--hover">Work with us!</a>
         </li>
         <li id="contact--form">
-          <a href="#" class="btn--zoom btn--contact">Contact</a>
+          <a href="#" class="btn--hover btn--contact">Contact</a>
         </li>
       </ul>
     </header>
+
+    <img id="to-top" src="img/chevron-up-circle-sharp.svg"/>
+
       <!--Section 1-->
       <div class="section__1">
         <div class="container--motto">
@@ -33,16 +37,16 @@
           <img class="logo" src="img/img logo.png" />
           <h1 class="company__name">baby bear company</h1>
           </div>
-          <h3 class="slogan">Everything your <mark>baby</mark> needs <br>into one convenient <mark>shop!</mark>
+          <h3 class="slogan">Everything your <mark>baby</mark> needs <br>into one convenient <mark>place!</mark>
           </h3>
           <p>
-            <a href="#" id="learn-more" class="btn__learn">Learn more &darr;</a>
+            <a href="#section--1" id="learn-more" class="nav__link btn__learn">Learn more &darr;</a>
           </p>
         </div>
       </div>
 
       <!--Section 2: Presentation-->
-      <div class="section__2 section__2--container">
+      <div class="section__2 section__2--container" id="section--1">
         <div class="section__2--buttons">
           
             <button
@@ -95,7 +99,7 @@
         </div>
       </div>
       <!--Section 3: Testimonials-->
-      <div class="section__3 section__3--container">
+      <div class="section__3 section__3--container" id="section--2">
        <div class="section__3--container person--1">
          <p> Excepteur sint occaecat cupidatat non proident, sunt in
            culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -106,7 +110,7 @@
          <p> Excepteur sint occaecat cupidatat non proident, sunt in
            culpa qui officia deserunt mollit anim id est laborum.</p>
            <img class="contact__person contact__person--2" src="img/face-of-a-woman.jpg">
-           <span class="contact__person__name">Marcel Scandura</span>
+           <span class="contact__person__name">Marcelina Scandura</span>
           </div>
        <div class="section__3--container person--3">
          <p> Excepteur sint occaecat cupidatat non proident, sunt in
@@ -116,13 +120,13 @@
        </div>
       </div>
       <!--Section 4: Call to action-->
-      <div class="section__4">
+      <div class="section__4" id="section--3">
         <img class="section__4--baby-on-moon" src="img/baby-sitting-on-a-moon-png.png">
         <div class="section__4--call-to-action">
         <p>Order the best you can get on the market!</p>
         </div>
+        <a href="#" class="btn--contact btn__contact--bottom">Contact us!</a></div>
       </div>
-    </div>
     <!--Footer-->
     <footer class="footer">
       <div class="section--footer">
@@ -134,5 +138,24 @@
       </p>
     </div>
     </footer>
+
+    <div class="modal hidden">
+      <button class="btn--close-modal">&times;</button>
+      <h2 class="modal__header">
+        Contact us now for the best deals on the market!
+      </h2>
+      <form class="modal__form">
+        <label>First Name</label>
+        <input type="text" />
+        <label>Last Name</label>
+        <input type="text" />
+        <label>Email Address</label>
+        <input type="email" />
+        <label class="message">Message</label>
+        <textarea class="message-textarea" rows=2.5></textarea>
+        <button class="btn--submit">Submit!</button>
+      </form>
+    </div>
+    <div class="overlay hidden"></div>
   </body>
 </html>
