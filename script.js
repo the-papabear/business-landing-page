@@ -6,11 +6,12 @@ const section1 = document.querySelector("#section--1");
 
 const contact = document.querySelectorAll(".btn--contact");
 const modal = document.querySelector(".modal");
+const modalForm = document.querySelector(".modal__form");
 const overlay = document.querySelector(".overlay");
 const btnSubmit = document.querySelector(".btn--submit");
 const closeModal = document.querySelector(".btn--close-modal");
+const submitionMessage = document.querySelector(".submition-complete");
 
-console.log(contact);
 //Smooth scroll to sections:
 document.querySelector(".nav__links").addEventListener("click", function (e) {
   e.preventDefault();
@@ -56,7 +57,17 @@ for (let i = 0; i < contact.length; i++) {
   });
 }
 
-closeModal.addEventListener("click", function () {
+const closeModalFunction = function () {
   modal.classList.add("hidden");
   overlay.classList.add("hidden");
+  submitionMessage.classList.add("hidden");
+};
+
+closeModal.addEventListener("click", closeModalFunction);
+
+btnSubmit.addEventListener("click", function (e) {
+  e.preventDefault();
+  modalForm.reset();
+  submitionMessage.classList.remove("hidden");
+  setTimeout(closeModalFunction, 1000);
 });
