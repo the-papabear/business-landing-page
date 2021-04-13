@@ -8,9 +8,7 @@ body {
   font-size: 30px;
 }
 
-.section__1,
-.section__2,
-.section__3 {
+.section {
   border-bottom: 3px solid #9b9b9b80;
   margin-bottom: 7px;
 }
