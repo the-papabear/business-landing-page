@@ -11,6 +11,9 @@ const overlay = document.querySelector(".overlay");
 const btnSubmit = document.querySelector(".btn--submit");
 const closeModal = document.querySelector(".btn--close-modal");
 const submitionMessage = document.querySelector(".submition-complete");
+const presentationTab = document.querySelectorAll(".presentation__tab");
+const presentationContent = document.querySelectorAll(".presentation__content");
+const presentationContainer = document.querySelector(".section__2--container");
 
 //Smooth scroll to sections:
 document.querySelector(".nav__links").addEventListener("click", function (e) {
@@ -59,8 +62,11 @@ for (let i = 0; i < contact.length; i++) {
 
 const closeModalFunction = function () {
   modal.classList.add("hidden");
-  overlay.classList.add("hidden");
+};
+
+const closeSubmit = function () {
   submitionMessage.classList.add("hidden");
+  overlay.classList.add("hidden");
 };
 
 closeModal.addEventListener("click", closeModalFunction);
@@ -68,6 +74,28 @@ closeModal.addEventListener("click", closeModalFunction);
 btnSubmit.addEventListener("click", function (e) {
   e.preventDefault();
   modalForm.reset();
+  closeModalFunction();
   submitionMessage.classList.remove("hidden");
-  setTimeout(closeModalFunction, 1000);
+
+  setTimeout(closeSubmit, 1500);
+});
+
+//Section 2 Presentation functionality
+presentationContainer.addEventListener("click", function (e) {
+  const clickedTab = e.target.closest(".presentation__tab");
+
+  if (!clickedTab) return;
+
+  presentationTab.forEach((t) =>
+    t.classList.remove("presentation__tab--active")
+  );
+  presentationContent.forEach((c) =>
+    c.classList.remove("presentation__content--active")
+  );
+
+  clickedTab.classList.add("presentation__tab--active");
+
+  document
+    .querySelector(`.presentation__content--${clickedTab.dataset.set}`)
+    .classList.add("presentation__content--active");
 });
